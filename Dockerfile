@@ -30,7 +30,7 @@ RUN curl -L http://mirrors.jenkins-ci.org/war-stable/$JENKINS_VERSION/jenkins.wa
   -o /usr/share/jenkins/jenkins.war \
   && echo "$JENKINS_SHA256 /usr/share/jenkins/jenkins.war" | sha256sum -c -
 
-ENV JENKINS_UC https://updates.jenkins-ci.org
+ENV JENKINS_UC http://mirrors.jenkins-ci.org
 RUN chown -R jenkins "$JENKINS_HOME" /usr/share/jenkins/ref
 
 # for main web interface:
